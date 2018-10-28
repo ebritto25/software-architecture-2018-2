@@ -68,7 +68,7 @@
                         <td>${country.acronym}</td>
                         <td>${country.phoneDigits}</td>
                         <td>  
-                            <form action="/country/delete/${country.id}" method="post">
+                            <form action="/country/delete/" method="post">
                                 <input name="id" type="hidden" value="${country.id}">
                                 <a onclick="this.parentNode.submit()" title="Deletar Usuário"><i class="fas fa-trash"></i></a>
                             </form>

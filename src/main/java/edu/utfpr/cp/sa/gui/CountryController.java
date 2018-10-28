@@ -43,19 +43,21 @@ public class CountryController {
             //TODO: handle exception
         }
         
+
         return "redirect:/country";
     }
 
-    @PostMapping ("/country/delete/{id}")
-    public String delete (Long id) {
+	@PostMapping ("/country/delete")
+	public String delete(CountryDTO country) {
+		
+		try{
+			countryBusiness.delete(country.getId());
+		}
+		catch(Exception e) {
 
-        try {
-            countryBusiness.delete(id);
+		}
 
-        } catch (Exception e) {
-            //TODO: handle exception
-        }
-        
-        return "redirect:/country";
-    }
+
+		return "redirect:/country";
+	}
 }
