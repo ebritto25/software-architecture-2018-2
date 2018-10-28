@@ -10,6 +10,8 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -55,6 +57,7 @@
                         <th>Name</th>
                         <th>Acronym</th>
                         <th>Phone Digits</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -64,6 +67,11 @@
                         <td>${country.name}</td>
                         <td>${country.acronym}</td>
                         <td>${country.phoneDigits}</td>
+                        <td>  
+                            <form action="/country/delete/${country.id}" method="post">
+                                <input name="id" type="hidden" value="${country.id}">
+                                <a onclick="this.parentNode.submit()" title="Deletar Usuário"><i class="fas fa-trash"></i></a>
+                            </form>
                     </tr>
                 </#list>    
                 </tbody>
