@@ -1,3 +1,7 @@
+# Integrantes
+    -Eduardo Britto da Costa
+    -Yasmim Gouveia Martns
+    -Rodrigo Valente Bernardes
 # Repository of Software Architecture Artefacts
 
 This repository groups artefacts used on software architecture module. This module is delivered to undergraduate students of computer science-related courses at Universidade Tecnológica Federal do Paraná, Cornélio Procópio, Brazil.  
@@ -92,3 +96,4 @@ curl -X POST localhost:8080/person -H "Content-type: application/json" -d '{"nam
 
 curl -X PUT localhost:8080/person -H "Content-type: application/json" -d '{"name": "John Connor", "age": 14}' localhost:8080/person
 ```
+
